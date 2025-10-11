@@ -1,0 +1,18 @@
+## Đệ quy:
+- quá trình một hàm gọi lại chính nó 
+*** Điều kiện:
+1. Bài toán cơ sở
+2. Công thức quy nạp
+#I. Cây đệ quy 
+    + biểu diễn quá trình đệ quy
+#II. Phân loại đệ quy
+ - Dựa theo thứ tự thực hiện logic và lời gọi hàm
+ + Đệ quy thực hiện công việc trước
+ + Đệ quy thực hiện công việc sau
+# III. Khử và tối ưu đệ quy.
+1. Đệ quy có nhớ: lưu lại kết quả đã tính trước đó. --> tối ưu
+2. Khử đệ quy
+# IV. Tail recursion - đệ quy đuôi
+ + Lời gọi đệ quy là câu cuối cùng trong hàm.
+ + Kết quả trả về của hàm chính là kết quả của lời gọi đệ quy.
+ - Ưu điểm hạn chế stack, giảm hoắc không có tình trạng stackOverFlow
