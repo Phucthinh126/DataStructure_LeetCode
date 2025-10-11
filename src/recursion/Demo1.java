@@ -1,6 +1,6 @@
 package recursion;
 
-public class Demo {
+public class Demo1 {
 
     // tính giai thừa
     public static int factorial(int n) {

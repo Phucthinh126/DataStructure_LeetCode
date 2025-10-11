@@ -4,7 +4,10 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class Tail_Recursion {
+public class Demo1_TailRecursion {
+    /*
+     * Tail_Recursion - đệ quy đuôi
+     */
     // recursion - tổng n số nguyên
     public static int sumNumber(int n) {
         if (n == 1) {
