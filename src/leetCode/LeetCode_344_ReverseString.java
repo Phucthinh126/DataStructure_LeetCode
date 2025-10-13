@@ -1,9 +1,9 @@
-package leetCode_String;
-
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+package leetCode;
 
 public class LeetCode_344_ReverseString {
+    /*
+     * Topics: String, recursion
+     */
     /*
      * Write a function that reverses a string. The input string is given as an
      * array of characters s.
