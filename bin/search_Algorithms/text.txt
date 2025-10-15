@@ -1,0 +1,50 @@
+## Linear Search
+*1. arr[] gồm n số nguyên, và một phần tử nguyên x , hãy tìm xem phần tử x có trong mảng hay không.
+Trả về chỉ số của lần xuất hiện đầu tiên của x trong mảng, hoặc -1 nếu x không tồn tại.
+*2. Time and Space Complexity:
+ + Tốt nhất O(1) - trường hợp khóa ở chỉ mục đầu tiên
+ + Tệ nhất O(n) - khóa ở cuối, n độ dài mảng
+ + Trung bình O(n)
+*3. Ưu điểm:
+ + đơn giản, dễ triển khai.
+ + Không yêu cầu mảng phải được sắp xếp. 
+ + Dùng được cho bất kỳ kiểu dữ liệu nào (miễn là có khả năng so sánh) và cấu trúc liên kết như mảng, danh sách liên kết. 
+ + Không cần bộ nhớ phụ lớn (không dùng thêm cấu trúc dữ liệu khác).
+*4. Nhược điểm:
+ + Khi kích thước dữ liệu lớn, hiệu suất tụt
+ + Không tận dụng được tính chất sắp xếp (nếu có) để tối ưu hóa việc tìm kiếm
+ + Không hiệu quả cho các tập dữ liệu lớn khi cần tìm kiếm nhiều lần.
+*5. Khi nào dùng:
+ + Dữ liệu chưa được sắp xếp hoặc sắp xếp không quan trọng.
+ + Kích cỡ dữ liệu nhỏ
+ + Cấu trúc dữ liệu không hỗ trợ truy cập ngẫu nhiên (ví dụ danh sách liên kết) — bạn không thể dùng binary search nếu không thể truy cập phần tử giữa nhanh chóng.
+ + Khi bạn chỉ thực hiện tìm kiếm một lần hoặc rất ít lần, chi phí sắp xếp để dùng thuật toán nhanh hơn (như binary search) có thể không đáng.
+
+ ## Binary Search
+*1. Điều kiện để sử dụng binary search:
+  + Dữ liệu phải được sắp xếp
+*2. Các bước:
+  1. Khởi tạo search space:
+  + Gán low = 0; high = length -1;
+  2. Tìm chỉ số giữa mid (middle)
+  + Tính mid = low + (high - low) /2 (trách stackOverflow)
+  + mid là chỉ số của phần tử giữa search space
+  3. So sánh A[mid] với key:
+  + Nếu A[mid] == key --> thấy --> return về mid
+  + Nếu A[mid] > key --> key nó nằm bên trái mid [low ... mid -1]
+  + Nếu A[mid] < key --> key nó nằm bên phải mid [mid +1 .. high]
+  4. Cập nhật search space:
+  + Nếu nửa trái high = mid -1
+  + Nếu nửa phải low = mid +1
+  5. Lặp/đệ quy
+  + quay lại step 2 với high và low mới
+  + đệ quy điều kiện cơ sở (low> high)
+*3. Khai triển binary search algorithm:
+  1. Iterative binary Search Algorithms:
+  + sử dụng while loop
+  + Time Complexity: O(log n)
+  + Space Complexity: O(1)
+  2. Recursion binary search algorithm:
+  + sử dụng đệ quy
+  + Time Complexity: O(log n)
+  + Space Complexity: O(log n)
