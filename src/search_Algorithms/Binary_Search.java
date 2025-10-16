@@ -1,5 +1,7 @@
 package search_Algorithms;
 
+import java.util.Arrays;
+
 public class Binary_Search {
     /*
      * 
@@ -45,6 +47,12 @@ public class Binary_Search {
         return recursionBinary(arr, key, 0, arr.length - 1);
     }
 
+    // sử dụng library Arrays
+    public static int binarySearchUseLi(int[] arr, int key) {
+        Arrays.sort(arr);
+        return Arrays.binarySearch(arr, key);
+    }
+
     public static void main(String[] args) {
         int[] arr = { 2, 5, 6, 8, 9, 12, 14, 17, 24, 26, 31 };
         System.out.println("Iterative Binary Search:");
@@ -56,6 +64,9 @@ public class Binary_Search {
         System.out.println("index of 17: " + recursionBinarySearch(arr, 17));
         System.out.println("index of 17: " + recursionBinarySearch(arr, 6));
         System.out.println("index of 17: " + recursionBinarySearch(arr, 71));
+        System.out.println("++++++++++++++++++++++++++++++++");
+        System.out.println("Su dung thu vien Arrays");
+        System.out.println("index of 9: " + binarySearchUseLi(arr, 9));
 
     }
 
