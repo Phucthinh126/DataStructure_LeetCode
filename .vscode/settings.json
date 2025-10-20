@@ -1,7 +1,11 @@
 {
-    "java.project.sourcePaths": ["src"],
+    "java.project.sourcePaths": [
+        "src"
+    ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
-    ]
+        "d:\\08. UN\\01. NAM2\\DataStructure\\Data_Structure\\lib\\junit-4.13.2.jar",
+        "d:\\08. UN\\01. NAM2\\DataStructure\\Data_Structure\\lib\\hamcrest-core-1.3.jar"
+    ],
+    "java.dependency.packagePresentation": "flat"
 }
