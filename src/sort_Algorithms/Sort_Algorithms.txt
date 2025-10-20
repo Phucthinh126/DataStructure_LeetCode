@@ -47,7 +47,40 @@ III. Sort Algorithms
    + In Place: sắp xếp tại chỗ.
    + Kiểu sắp xếp: Comparison - based
    + Cách hoạt động: chọn phần tử nhỏ nhất rồi hoán đổi
-   + Time complexity: O(n^2)
+   + Time complexity: 
+    best: O(n^2)
+    worst: O(n^2)
+    avg: O(n^2)
    + Ổn định: ko
    + Ưu điểm: dễ hiểu, dễ cài đặt
    + Nhược điểm: chậm với mảng lớn.
+  2. Bubble Sort Algorithms:
+   - Ý tưởng:
+   + So sánh hai phần tử liền kề nhau, duyệt qua nhiều lần và phần tử lớn sẽ được di chuyển đến phần tử cuối cùng.
+   + Hoán đổi phần tử lớn hơn đứng trước phần tử nhỏ hơn.
+   - Đặc điểm:
+   + In Place: có
+   + Time complexity:
+    best: O(n)
+    worst: O(n^2)
+    avg: O(n^2)
+   + Ổn định: có
+   + Ưu điểm: dễ hiểu, dễ cài đặt
+   + Nhược điểm: chậm với mảng lớn.
+  3. Insert Sort Algorithms:
+   - Ý tưởng:
+   + Chia làm hai phần: phần được sắp xếp và phần chưa được sắp xếp, mỗi lần lặp lấy một phần tử từ phần chưa sắp xếp chèn nó đúng vào vị trí trong phần đã sắp xếp
+   + Hoạt động:
+    . Bắt đầu từ phần tử thứ 2, vì phần tử đầu tiên mặc định là sắp xếp
+    . So sánh phần tử hiện tại với các phần tử trước đó, nếu nhỏ hơn dịch tất cả các phần tử sang phải đê tạo chỗ trống
+    . Chèn phần tử vào đúng ví trí
+    . lặp lại cho đến khi toàn bộ mảng được sắp xếp
+   - Đặc điểm:
+   + Time complexity: 
+     Best: O(n)
+     Worst: O(n^2)
+     Agv: O(n^2)
+   + In place: có
+   + Là giải thuật ổn định (stable sort).
+   + Hiệu quả với danh sách nhỏ hoặc gần như đã sắp xếp
+   + Hiệu năng kém với dữ liệu lớn.
