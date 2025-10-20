@@ -44,7 +44,7 @@ public class LeetCode_50_Pow {
         }
         if (n % 2 == 0) {
             double r = recPow(x, n / 2);
-            return x * r;
+            return r * r;
         }
         double r = recPow(x, (n - 1) / 2);
         return x * r * r;
@@ -52,7 +52,7 @@ public class LeetCode_50_Pow {
     }
 
     public static void main(String[] args) {
-        System.out.println(mathPow(2.00, 10));
+        System.out.println(mathPow(2.00000, 10));
         System.out.println(mathPow(2.100, 3));
         System.out.println(mathPow(2.00, -2));
         System.out.println();

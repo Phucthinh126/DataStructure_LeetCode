@@ -36,3 +36,18 @@ II. Type of sorting techniques.
   - Thường dùng đếm, phân loại, hoặc sắp xếp theo từng chữ số (digit) thay vì so sánh trực tiếp.
   - Ví dụ: Counting sort, bucket sort, radix sort.
   - Time complexity: O(n)
+III. Sort Algorithms
+ 1. Selection Sort Algorithms: 
+  - Ý tưởng:
+  + Tìm phần tử nhỏ nhất trong toàn bộ mảng.
+  + Hoán đổi phần tử nhỏ nhất đó với phần tử đầu tiên của mảng. → Khi đó, phần tử đầu tiên đã ở đúng vị trí cuối cùng của nó trong mảng đã sắp xếp.
+  + Tìm phần tử nhỏ nhất trong phần còn lại của mảng (bắt đầu từ vị trí thứ 2), rồi hoán đổi nó với phần tử thứ hai.
+  + Tiếp tục quá trình cho đến khi toàn bộ mảng được sắp xếp.
+  - Đặc điểm:
+   + In Place: sắp xếp tại chỗ.
+   + Kiểu sắp xếp: Comparison - based
+   + Cách hoạt động: chọn phần tử nhỏ nhất rồi hoán đổi
+   + Time complexity: O(n^2)
+   + Ổn định: ko
+   + Ưu điểm: dễ hiểu, dễ cài đặt
+   + Nhược điểm: chậm với mảng lớn.

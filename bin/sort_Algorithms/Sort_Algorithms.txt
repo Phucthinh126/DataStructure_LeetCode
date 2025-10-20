@@ -1,3 +1,53 @@
 ###### Sort Algorithms ######
-I. Selection_Sort
- 1. 
+I. Basic Sort
+ - https://www.geeksforgeeks.org/dsa/introduction-to-sorting-algorithm/
+ 1. In Place Sorting _ sắp xếp tại chỗ:
+  + Không tạo ra thêm bản sao hay mảng phụ, thay đổi trực tiếp dữ liệu ngay trên mảng gốc, chỉ dùng một lượng bộ nhớ (constant space) để tạo ra kết quả.
+  + Ví dụ: selection sort, bubble sort, insertion sort, heap sort.
+ 2. Internal Sorting _ sắp xếp nội bộ:
+  + Sắp xếp khi toàn bộ dữ liệu cần sắp xếp đều được lưu trữ trong bộ nhớ chính (main memory)
+  + Toàn bộ dữ liệu truy cập trực tiếp trong ram, không cần đọc ghi thường xuyên từ bộ nhớ ngoài\
+  - Đặc điểm: dữ liệu nhỏ nếu vượt quá dung lượng bộ nhớ chính, Internal sorting không thể thực hiện được.
+              nhanh, không có độ trễ do I/O.
+  + ví dụ: selection sort, insertion sort, quick sort, merge sort.
+ 3. External sorting _ sắp xếp ngoài bộ:
+  + Dùng để sắp xếp dữ liệu lớn, vượt qua không gian bộ nhớ chính (main memory), buộc phải lưu trữ và xử lý một phần trong bộ nhớ phụ.
+ 4. Stable sorting _ sắp xếp ổn định:
+  + Một thuật toán sắp xếp ổn định (stable sorting algorithm) là thuật toán mà nếu hai phần tử có khóa bằng nhau, thì thứ tự của chúng trong kết quả sắp xếp giống với thứ tự trong dữ liệu ban đầu.
+  + khi ta có các cặp key–value.
+  + Đối với số nguyên không cần tính ổn định
+  + Tính ổn định giữ nguyên các giá trị bằng nhau khi sắp xếp - đặc biệt qua trọng khi dữ liệu có nhiều khóa trùng nhau hoặc cần sắp xếp nhiều lần theo các tiêu chí khác nhau.
+  + Ví dụ: bubble sort, insertion sort, merge sort, couting sort, radix sort.
+  + selection sort - có thể ổn định nếu xét chỉ số.
+  + quick sort, heap sort - mặc định không ổn định
+ 5. Hybrid sort:
+  + Kết hợp các thuật toán sắp xếp với nhau.
+  + tim sort: sử dụng merge sort - insertion sort
+  + introSort: sử dụng quick sort, heap sort, insertion sort
+II. Type of sorting techniques.
+ 1. Comparision - based: dựa trên so sánh
+  - Là loại thuật toán sắp xếp dựa trên việc so sánh các phần tử với nhau để xác định thứ tự.
+  - Thuật toán liên tục so sánh hai phần tử và hoán đổi vị trí của chúng nếu cần, cho đến khi toàn bộ mảng được sắp xếp.
+  - Ví dụ: Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Heap Sort.
+  - Time complexity: O(nlogn)
+ 2. Non comparision - based: không dựa trên so sánh.
+  - Là loại thuật toán sắp xếp không dùng phép so sánh trực tiếp giữa các phần tử.
+  - dựa vào đặc tính của dữ liệu (ví dụ: giá trị số nguyên, chữ cái, phạm vi giá trị, v.v.) để xác định vị trí của phần tử.
+  - Thường dùng đếm, phân loại, hoặc sắp xếp theo từng chữ số (digit) thay vì so sánh trực tiếp.
+  - Ví dụ: Counting sort, bucket sort, radix sort.
+  - Time complexity: O(n)
+III. Sort Algorithms
+ 1. Selection Sort Algorithms: 
+  - Ý tưởng:
+  + Tìm phần tử nhỏ nhất trong toàn bộ mảng.
+  + Hoán đổi phần tử nhỏ nhất đó với phần tử đầu tiên của mảng. → Khi đó, phần tử đầu tiên đã ở đúng vị trí cuối cùng của nó trong mảng đã sắp xếp.
+  + Tìm phần tử nhỏ nhất trong phần còn lại của mảng (bắt đầu từ vị trí thứ 2), rồi hoán đổi nó với phần tử thứ hai.
+  + Tiếp tục quá trình cho đến khi toàn bộ mảng được sắp xếp.
+  - Đặc điểm:
+   + In Place: sắp xếp tại chỗ.
+   + Kiểu sắp xếp: Comparison - based
+   + Cách hoạt động: chọn phần tử nhỏ nhất rồi hoán đổi
+   + Time complexity: O(n^2)
+   + Ổn định: ko
+   + Ưu điểm: dễ hiểu, dễ cài đặt
+   + Nhược điểm: chậm với mảng lớn.
