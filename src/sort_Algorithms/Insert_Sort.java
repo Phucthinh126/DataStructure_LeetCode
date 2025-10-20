@@ -49,17 +49,40 @@ public class Insert_Sort {
 
     }
 
+    /*
+     * Ứng dụng Insert sort to sort char array
+     * [G,K,L,A,J,I,Q,Z,C]
+     */
+    public static char[] insertSort_Char(char[] c) {
+        for (int i = 1; i < c.length; i++) {
+            char key = c[i];
+            int j = i - 1;
+            while (j >= 0 && c[j] > key) {
+                c[j + 1] = c[j];
+                j = j - 1;
+            }
+            c[j + 1] = key;
+        }
+        return c;
+    }
+
     public static void main(String[] args) {
         int[] arr = { 12, 3, 1, 5, 8 };
         int[] arrr = { 12, 11, 13, 5, 6 };
         int[] arrrr = { 12, 3, 1, 5, 8 };
+        char[] c = { 'G', 'K', 'L', 'A', 'J', 'I', 'Q', 'Z', 'C' };
 
         insert_Sort(arr);
         insert_Sort(arrr);
-        // System.out.println(Arrays.toString(arr));
-        // System.out.println(Arrays.toString(arrr));
         recursion_Insert_Sort(arrrr);
+        insertSort_Char(c);
+        System.out.println("Iterative insert sort");
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arrr));
+        System.out.println("Recursion insert sort");
         System.out.println(Arrays.toString(arrrr));
+        System.out.println("Insert sort char array");
+        System.out.println(Arrays.toString(c));
 
     }
 }

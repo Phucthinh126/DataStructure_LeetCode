@@ -18,15 +18,19 @@ public class Selection_Sort {
                     minIndex = j;
                 }
             }
-            int step = arr[i];
+            int temp = arr[i];
             arr[i] = arr[minIndex];
-            arr[minIndex] = step;
+            arr[minIndex] = temp;
         }
 
         return arr;
     }
 
     // using recursion
+    public static int[] seclection_Sort_Recursion(int[] arr) {
+        return swap(arr, 0, arr.length - 1);
+    }
+
     public static int[] swap(int[] arr, int star, int n) {
         if (star == n) {
             return arr;
@@ -39,15 +43,30 @@ public class Selection_Sort {
                 minIndex = i;
             }
         }
-        int stemp = arr[star];
+        int temp = arr[star];
         arr[star] = arr[minIndex];
-        arr[minIndex] = stemp;
+        arr[minIndex] = temp;
 
         return swap(arr, star + 1, n);
     }
 
-    public static int[] seclection_Sort_Recursion(int[] arr) {
-        return swap(arr, 0, arr.length - 1);
+    // ứng dụng săp xếp chuỗi ký tự
+    /*
+     * [G,K,L,A,J,I,Q,Z,C]
+     */
+    public static char[] seclectionSort_Char(char[] c) {
+        for (int i = 0; i < c.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < c.length; j++) {
+                if (c[minIndex] > c[j]) {
+                    minIndex = j;
+                }
+            }
+            char temp = c[i];
+            c[i] = c[minIndex];
+            c[minIndex] = temp;
+        }
+        return c;
     }
 
     public static void main(String[] args) {
@@ -56,6 +75,13 @@ public class Selection_Sort {
         seclection_Sort_Recursion(arr);
         for (int i : arr) {
             System.out.print(i + " ");
+        }
+        System.out.println();
+        // test selection sort for char array
+        char[] c = { 'G', 'K', 'L', 'A', 'J', 'I', 'Q', 'Z', 'C' };
+        seclectionSort_Char(c);
+        for (char d : c) {
+            System.out.print(d + " ");
         }
     }
 }

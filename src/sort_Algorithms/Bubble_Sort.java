@@ -45,6 +45,24 @@ public class Bubble_Sort {
 
     }
 
+    /*
+     * Ứng dụng sắp xếp chuỗi char sử dụng bubble sort
+     * [G,K,L,A,J,I,Q,Z,C]
+     */
+    public static char[] bubbleSort_Char(char[] c) {
+        for (int i = 0; i < c.length - 1; i++) {
+            for (int j = 0; j < c.length - i - 1; j++) {
+                if (c[j] > c[j + 1]) {
+                    char temp = c[j];
+                    c[j] = c[j + 1];
+                    c[j + 1] = temp;
+
+                }
+            }
+        }
+        return c;
+    }
+
     public static void main(String[] args) {
         System.out.println("Iterative bubble sort");
         int[] arr = { 5, 6, 1, 3, 7, 8, 2, 4, 10, 15, 14, 16, 23, 22, 44, 24, 18, 32, 31, 45 };
@@ -58,6 +76,14 @@ public class Bubble_Sort {
         bubble_Sort_Recursion(arrRec);
         for (int i : arrRec) {
             System.out.print(i + " ");
+        }
+
+        System.out.println();
+        System.out.println("Bubble sort char array ");
+        char[] c = { 'G', 'K', 'L', 'A', 'J', 'I', 'Q', 'Z', 'C' };
+        bubbleSort_Char(c);
+        for (char d : c) {
+            System.out.print(d + " ");
         }
 
     }
