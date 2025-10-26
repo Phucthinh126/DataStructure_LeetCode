@@ -19,7 +19,8 @@ public class LeetCode_912_SortAnArray {
      */
 
     /*
-     * Solution: using Selection sort algorithms không thể do quá thời gian
+     * using Selection, bubble, insert sort algorithms không thể do quá thời gian
+     * Solution: merge sort
      */
 
 }
