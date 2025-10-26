@@ -84,3 +84,15 @@ III. Sort Algorithms
    + Là giải thuật ổn định (stable sort).
    + Hiệu quả với danh sách nhỏ hoặc gần như đã sắp xếp
    + Hiệu năng kém với dữ liệu lớn.
+  4. Merge Sort Algorithms:
+   - Tuân theo tư tưởng: "Divide and Conquer" - Chia để trị
+   - Ý tưởng:
+    + 1. chia (Divide): mảng đầu vào được chia ra làm hai nửa.
+    + 2. trị (Conquer): gọi đệ quy để sắp xếp từng nửa con.
+    + 3. trộn (Merge): gộp hai mảng con đã được sắp xếp thành một mảng đã được sắp xếp.
+  - Đặc điểm;
+   + Time complexity:
+    Best case: O(nlogn) - khi mảng đã được sắp xếp hoặc gần như đã sắp xếp.
+    Agv: O(nlogn) - khi mảng có thứ tự ngẫu nhiên.
+    Worst case: O(nlogn) - khi mảng được sắp xếp theo thứ tự ngược.
+
