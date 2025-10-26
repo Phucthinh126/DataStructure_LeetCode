@@ -95,4 +95,12 @@ III. Sort Algorithms
     Best case: O(nlogn) - khi mảng đã được sắp xếp hoặc gần như đã sắp xếp.
     Agv: O(nlogn) - khi mảng có thứ tự ngẫu nhiên.
     Worst case: O(nlogn) - khi mảng được sắp xếp theo thứ tự ngược.
+  - Ứng dung:
+   + Sắp xếp các tập dữ liệu lớn (large datasets).
+   + Sắp xếp ngoài (External sorting) — khi dữ liệu quá lớn để nạp hết vào bộ nhớ chính.
+   + Được sử dụng để giải các bài toán như Inversion counting, Count Smaller on Right, và Surpasser Count.
+   + Merge Sort và các biến thể của nó được dùng trong các thư viện lập trình. Biến thể TimSort được sử dụng trong Python, Java (Android) và Swift. 
+     Lý do chính khiến nó được ưa chuộng cho các kiểu dữ liệu non-primitive là tính ổn định (stability) — điều mà QuickSort không có. 
+     Trong Java, Arrays.sort() sử dụng QuickSort, còn Collections.sort() sử dụng MergeSort.
+   + Là thuật toán được ưu tiên để sắp xếp danh sách liên kết (Linked list).
 
