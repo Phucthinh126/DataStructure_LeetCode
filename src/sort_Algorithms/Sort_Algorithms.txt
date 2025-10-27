@@ -84,7 +84,7 @@ III. Sort Algorithms
    + Là giải thuật ổn định (stable sort).
    + Hiệu quả với danh sách nhỏ hoặc gần như đã sắp xếp
    + Hiệu năng kém với dữ liệu lớn.
-  4. Merge Sort Algorithms:
+  4. Merge Sort Algorithms (sắp xếp trộn):
    - Tuân theo tư tưởng: "Divide and Conquer" - Chia để trị
    - Ý tưởng:
     + 1. chia (Divide): mảng đầu vào được chia ra làm hai nửa.
@@ -103,4 +103,32 @@ III. Sort Algorithms
      Lý do chính khiến nó được ưa chuộng cho các kiểu dữ liệu non-primitive là tính ổn định (stability) — điều mà QuickSort không có. 
      Trong Java, Arrays.sort() sử dụng QuickSort, còn Collections.sort() sử dụng MergeSort.
    + Là thuật toán được ưu tiên để sắp xếp danh sách liên kết (Linked list).
+ 5. Quick Sort Algorithms (sắp xếp nhanh):
+  - Dựa trên phương pháp chia để trị (divide and Conquer).
+  - Chọn một phần tử làm pivot (chốt) và phân hoạch (partition) mảng xung quanh phần tử đó bằng cách đặt pivot vào đúng vị trí của nó trong mảng đã sắp xếp (sorted array)
+  - Ý tưởng: 
+   + B1 - chọn pivot: chọn một phần tử trong mảng làm pivot (đầu, giữa, cuối).
+   + B2 - Phân hoạch mảng (partition the array): xếp lại mảng xung quanh pivot, sau khi phân hoạch các phần tử < pivot ở bên trái, > pivot nằm bên phải, thu được chỉ số pivot.
+   + B3 - gọi đệ quy (recursion): gọi đệ quy cho các mảng con.
+   + B4 - base case: điều kiện để đệ quy dừng khi mảng con chỉ còn 1 phần tử.
+  - Lựa chọn pivot: 
+   + Luôn chọn phần tử đầu hoặc cuối: nhược điểm dễ rơi vào worst  khi mảng đã được sắp xếp sẵn.
+   + Chọn phần tử ngẫu nhiên (Random element): không tạo ra mẫu cố định (pattern), tránh worst case.
+   + Chọn phần tử trung vị (median): Cách tối ưu time complexity, nếu tìm được median trong thời gian tuyến tính, partition() chia mảng làm hai nửa bằng nhau.Tốn thời gian do tìm median có hằng số tg cao.
+  - Partition Algorithms: 
+    Quá trình quan trọng nhất trong quick sort là hàm partition().
+    # 3 thuật toán phổ biến với độ phức tạp O(n)
+   + Naive Partition (Phân vùng ngây thơ): tạo một bản sao, đưa các phần tử nhỏ hơn pivot vào trước sau đó các phần tử lớp hơn, cuối cùng sao chép mảng tạm vào mảng gốc.
+   + Lomuto Partition (): đơn giản theo dõi chỉ số của phần tử nhỏ hơn và thực hiện swap khi cần thiết.
+   + Hoare's Partion: thuật toán nhanh nhấ, duyệt mảng từ cả hai đầu, hoán đổi phần tử lớn ở bên trái với phẩn tử nhỏ ở bên phải cho đến khi mảng được phân hoạch.
+  - Time complexity:
+   + Best case: Ω(n log n) - pivot chia hai mảng thành 2 nửa bẳng nhau.
+   + AGV case: θ(n log n) - pivot chia hai mảng bằng nhau, không nhất thiết cân đối hoàn toàn.
+   + Worst case: O(n²)  - khi phần tử nhỏ nhất ỏ lớn nhất làm pivot (mảng đã được sắp xếp).
+   
+
+
+
+
+
 

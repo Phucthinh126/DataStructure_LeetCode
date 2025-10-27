@@ -84,7 +84,7 @@ III. Sort Algorithms
    + Là giải thuật ổn định (stable sort).
    + Hiệu quả với danh sách nhỏ hoặc gần như đã sắp xếp
    + Hiệu năng kém với dữ liệu lớn.
-  4. Merge Sort Algorithms:
+  4. Merge Sort Algorithms (sắp xếp trộn):
    - Tuân theo tư tưởng: "Divide and Conquer" - Chia để trị
    - Ý tưởng:
     + 1. chia (Divide): mảng đầu vào được chia ra làm hai nửa.
@@ -103,4 +103,12 @@ III. Sort Algorithms
      Lý do chính khiến nó được ưa chuộng cho các kiểu dữ liệu non-primitive là tính ổn định (stability) — điều mà QuickSort không có. 
      Trong Java, Arrays.sort() sử dụng QuickSort, còn Collections.sort() sử dụng MergeSort.
    + Là thuật toán được ưu tiên để sắp xếp danh sách liên kết (Linked list).
+ 5. Quick Sort Algorithms (sắp xếp nhanh):
+  - Dựa trên phương pháp chia để trị (divide and Conquer).
+  - Chọn một phần tử làm pivot (chốt) và phân hoạch (partition) mảng xung quanh phần tử đó bằng cách đặt pivot vào đúng vị trí của nó trong mảng đã sắp xếp (sorted array)
+  - Ý tưởng: 
+   + B1 - chọn pivot: chọn một phần tử trong mảng làm pivot (đầu, giữa, cuối).
+   + B2 - Phân hoạch mảng (partition the array): xếp lại mảng xung quanh pivot, sau khi phân hoạch các phần tử < pivot ở bên trái, > pivot nằm bên phải, thu được chỉ số pivot.
+   + B3 - gọi đệ quy (recursion): gọi đệ quy cho các mảng con.
+   + B4 - base case: điều kiện để đệ quy dừng khi mảng con chỉ còn 1 phần tử.
 
