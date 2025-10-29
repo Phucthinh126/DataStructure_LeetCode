@@ -115,12 +115,12 @@ III. Sort Algorithms
    + Luôn chọn phần tử đầu hoặc cuối: nhược điểm dễ rơi vào worst  khi mảng đã được sắp xếp sẵn.
    + Chọn phần tử ngẫu nhiên (Random element): không tạo ra mẫu cố định (pattern), tránh worst case.
    + Chọn phần tử trung vị (median): Cách tối ưu time complexity, nếu tìm được median trong thời gian tuyến tính, partition() chia mảng làm hai nửa bằng nhau.Tốn thời gian do tìm median có hằng số tg cao.
-  - Partition Algorithms: 
+  - Partition Algorithms (thuật toán phân hoạch): 
     Quá trình quan trọng nhất trong quick sort là hàm partition().
     # 3 thuật toán phổ biến với độ phức tạp O(n)
    + Naive Partition (Phân vùng ngây thơ): tạo một bản sao, đưa các phần tử nhỏ hơn pivot vào trước sau đó các phần tử lớp hơn, cuối cùng sao chép mảng tạm vào mảng gốc.
    + Lomuto Partition (): đơn giản theo dõi chỉ số của phần tử nhỏ hơn và thực hiện swap khi cần thiết.
-   + Hoare's Partion: thuật toán nhanh nhấ, duyệt mảng từ cả hai đầu, hoán đổi phần tử lớn ở bên trái với phẩn tử nhỏ ở bên phải cho đến khi mảng được phân hoạch.
+   + Hoare's Partion: thuật toán nhanh nhất, duyệt mảng từ cả hai đầu, hoán đổi phần tử lớn ở bên trái với phẩn tử nhỏ ở bên phải cho đến khi mảng được phân hoạch.
   - Time complexity:
    + Best case: Ω(n log n) - pivot chia hai mảng thành 2 nửa bẳng nhau.
    + AGV case: θ(n log n) - pivot chia hai mảng bằng nhau, không nhất thiết cân đối hoàn toàn.
