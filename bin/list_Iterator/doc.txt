@@ -1,0 +1,40 @@
+# Iterator
+     * * dùng để duyệt (traverse) hoặc lặp (iterator) qua các phần tử của một collection theo từng phần tử 1
+     * * duyệt các ptu theo chiều tiến (forward direction)
+     * * xóa phần tử an toàn(safely) thông qua remote()
+     * * áp dụng cho list, set, queue
+ - syntax: Interface Iterator<E>
+ # hàm chính:
+    hasNext(): Trả về true nếu còn ít nhất một phần tử nữa trong dãy, ngược lại trả về false.
+
+    next(): Trả về phần tử kế tiếp trong dãy.
+
+    remove(): Xóa khỏi collection phần tử được trả về bởi lần gọi next() gần nhất.Nếu next() chưa được gọi, hoặc remove() đã được gọi sau lần next() gần nhất, phương thức này sẽ ném ra ngoại lệ IllegalStateException.
+
+ # Emlement Iterator
+  Iterator<ElementType> iter = colection.iterator();
+  while (iter.hasNext()){
+    ElementType variable = iter.next();
+    loopBody // có thể sự dụng biến variable
+  }
+# list
+ + IteratorList
+ + ArrayList
+ + LinkedList
+  $ IteratorList:
+  * Duyệt qua tất cả các loại list(Array list, linkedlist, vector, stack).
+  * Hoạt động với các lớp cài đạt list
+  * Hỗ trợ duyệt hai chiều tiến và lùi
+  * Hỗ trợ create, read, update, delete
+   - Con trỏ (cursor) nằm giữa phần tử trước (previous) và phần tử kế tiếp (next).
+   - dạnh sách độ dài n có n+1 vị trí cursor
+   - Duyệt tiến và lùi
+    + Duyệt theo chiều tiến (forward direction iteration)
+    .hasNext(): trả về true nếu danh sách còn phần tử để duyệt theo hướng tiến
+    .next(): trả về phần tử kế tiếp của danh sách và di chuyển con trỏ tiến.
+    .nextIndex(): trả về chỉ số index của phần tử sẽ được trả về khi gọi phương thức next().
+    + Duyệt theo chiều lùi (backward direction itration)
+    .hasPrevious(): trả về true nếu danh sách còn phần tử để duyệt theo hướng ngược
+    .previous(): trả về phần tử trước đó của danh sách và lùi con trỏ một vị trí
+    .previousIndex(): trả về chỉ số index của phần tử sẽ được trả về khi gọi phương thức previous(), listIterator đang ở đầu danh sách trả về -1.
+   - remove(): xóa phần tử cuối cùng trả về bởi next() hoặc previous(), phải gọi sau next()/previous(), chỉ gọi 1 lần cho mỗi lần next()/previous()
