@@ -17,11 +17,13 @@
     ElementType variable = iter.next();
     loopBody // có thể sự dụng biến variable
   }
+
 # list
  + IteratorList
  + ArrayList
  + LinkedList
-  $ IteratorList:
+ <---------------------->
+  @ IteratorList:
   * Duyệt qua tất cả các loại list(Array list, linkedlist, vector, stack).
   * Hoạt động với các lớp cài đạt list
   * Hỗ trợ duyệt hai chiều tiến và lùi
@@ -38,3 +40,15 @@
     .previous(): trả về phần tử trước đó của danh sách và lùi con trỏ một vị trí
     .previousIndex(): trả về chỉ số index của phần tử sẽ được trả về khi gọi phương thức previous(), listIterator đang ở đầu danh sách trả về -1.
    - remove(): xóa phần tử cuối cùng trả về bởi next() hoặc previous(), phải gọi sau next()/previous(), chỉ gọi 1 lần cho mỗi lần next()/previous()
+    $ Lưu ý: ListIterator giống như con trỏ sau khi chạy 1 hàm sẽ đứng ở vị trí nào thì hàm thứ 2 sẽ chạy bắt đầu từ vị trí đó, do đó cần đưa con trỏ về đầu trước khi thực hiện hàm khác
+  </--------------------->
+
+  <---------------------->
+  @ ArrayLisyt:
+  * ArrayList mảng thay đổi kích thước thuộc gói java.util, có khả năng tự động mở hoạc thu nhỏ
+   - Truy cập bằng chỉ mục: thông qua index
+   - Cho phép trùng lặp: các phần tử lặp được phép xuất hiện trong danh sách
+   - Giữ nguyên thứ tự chèn: phần tử được lưu trữ theo đúng thứ tự má chúng được thêm vào
+   - Không đồng bộ: mặc định, ArrayList không thread-safe, cần đồng bộ hóa thủ công khi truy cập trong môi trườn đa luồng
+  * ArrayList(class) ---implement---> list(Interface)---extends--->collection
+  

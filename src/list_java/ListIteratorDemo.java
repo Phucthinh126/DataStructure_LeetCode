@@ -1,4 +1,4 @@
-package list_Iterator;
+package list_java;
 
 import java.util.ArrayList;
 import java.util.Arrays;
