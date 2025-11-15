@@ -1,4 +1,4 @@
-package list_java;
+package list_java.LinkedList_SinglyLinkedList;
 
 public class LinkedList_Demo1 {
     // SINGLY LINKED LIST
@@ -13,6 +13,7 @@ public class LinkedList_Demo1 {
             this.data = data;
             this.next = null;
         }
+
 
         // singly LinkeList - Node
         public static void main(String[] args) {

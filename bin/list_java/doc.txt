@@ -70,4 +70,17 @@
   ** Add First:
     - Danh sách ban đầu:
     ( head → [MSP] → [ATL] → [BOS] → null )
-    
+    1. Tạo node mới
+    newest     head
+      ↓         ↓
+    [LAX] → ? [MSP] → [ATL] → [BOS] → null
+    2. Gán newNode.next = head
+    newest     head
+      ↓         ↓
+    [LAX] → [MSP] → [ATL] → [BOS] → null
+    3. Cập nhật head = newNode
+    head
+      ↓
+    [LAX] → [MSP] → [ATL] → [BOS] → null
+
+
