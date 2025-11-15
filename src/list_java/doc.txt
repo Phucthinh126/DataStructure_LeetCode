@@ -67,6 +67,7 @@
     - liên kết tự động tạo thành chuỗi tuần tự
     HEAD → [data|next] → [data|next] → [data|next] → null
     - Không đi ngược
+  --------------------------------------------------------
   ** Add First:
     - Danh sách ban đầu:
     ( head → [MSP] → [ATL] → [BOS] → null )
@@ -82,5 +83,26 @@
     head
       ↓
     [LAX] → [MSP] → [ATL] → [BOS] → null
+  ------------------------------------------
+  ** Add Last:
+   - Danh sách ban đầu:
+     [MSP] → [ATL] → [BOS] → null 
+     |                ↑
+     |               tail
+    1. Tạo node mới
+     [MSP] → [ATL] → [BOS] → null      [MIA] → null
+     |                 ↑                  ↑
+     |                tail              newest
+    2. Gắn tail.next = newNode
+     [MSP] → [ATL] → [BOS] → [MIA] → null
+     |                 ↑       ↑
+     |                tail   newest      
+    3. Cập nhật tail = newNode
+     [MSP] → [ATL] → [BOS] → [MIA] → null
+     |                         ↑
+     |                        tail
+
+  
+
 
 
