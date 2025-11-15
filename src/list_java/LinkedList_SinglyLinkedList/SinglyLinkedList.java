@@ -46,7 +46,7 @@ public class SinglyLinkedList<E> {
         // B1. tao node moi
         Node<E> newNode = new Node<>(data);
 
-        if (head == null) {
+        if (head == null) { // gan tail cho node cuoi
             tail = head = newNode;
         } else {
             // B2. Gan newNode lien ket voi null
