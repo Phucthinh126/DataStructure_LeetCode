@@ -62,6 +62,33 @@ public class SinglyLinkedList<E> {
 
     }
 
+    // remove element
+    public E removeFirst(){
+        //1. danh sach rong
+        if(head == null){
+            throw new java.util.MissingFormatArgumentException("List is empty");
+        }
+
+        // 2. luu node se bi xoa (de tra ve gia tri)
+        Node<E> removed  =head;
+        E data = removed.data;
+
+        // 3. di chuyen head
+        head = head.next;
+
+        // 4. ngan ro ri tham chieu
+        removed.next = null;
+
+        // 5. giam size
+        size--;
+
+        // 6. neu danh sach rong sau khi xoa -> cap nhat tail
+        if(head==null){
+            tail=null;
+        }
+        return data;
+    }
+
     public static void main(String[] args) {
         System.out.println("========AddFirst=========");
         SinglyLinkedList<String> list = new SinglyLinkedList<>();
