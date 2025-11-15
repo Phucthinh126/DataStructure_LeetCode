@@ -56,7 +56,7 @@
   <-------------------->
   @ linkedlist:
   #Basic:
-  * Singly Linked List:
+  !! Singly Linked List:
    - Một singly linked list (danh sách liên kết đơn) là một cấu trúc dữ liệu cơ bản.
    - Gồm các node, mỗi node chứa một trường dữ liệu(data field) và một tham chiếu(reference) đến node tiếp theo trong danh sách liên kết.
    - Next của node cuối cùng là null, biểu thị kết thúc danh sách.
@@ -68,6 +68,13 @@
     HEAD → [data|next] → [data|next] → [data|next] → null
     - Không đi ngược
   --------------------------------------------------------
+  ** Remove:
+    - RemoveFirst(): remove(LAX)
+     head → [LAX] → [MSP] → [ATL] → [BOS] → null
+     |     ([LAX]) → [MSP] → [ATL] → [BOS] → null      (LAX đang được “bỏ ra”)
+     |                 ↑
+     |                head
+     head → [MSP] → [ATL] → [BOS] → null     (LAX da bi xoa)
   ** Add First:
     - Danh sách ban đầu:
     ( head → [MSP] → [ATL] → [BOS] → null )
@@ -101,7 +108,8 @@
      [MSP] → [ATL] → [BOS] → [MIA] → null
      |                         ↑
      |                        tail
-
+  !! Doubly LinkedList:
+  
   
 
 
