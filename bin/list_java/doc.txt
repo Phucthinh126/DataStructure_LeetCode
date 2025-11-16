@@ -108,7 +108,20 @@
      [MSP] → [ATL] → [BOS] → [MIA] → null
      |                         ↑
      |                        tail
+  --------------------------------------------------
+  
   !! Doubly LinkedList:
+   - Phức tạp hơn Singly LinkedList.
+   - Cho phép duyệt danh sách hiệu quả theo cả hai hướng.
+   - Mỗi Node chứa con trỏ đến node trước đó và con trỏ đến node tiếp theo.
+     head                                                                        tail
+      ↓                                                                            ↓
+     null ← [prev|null | data=A | next→] ↔ [prev← | data=B | next→] ↔ [prev← | data=C | next|null] → null
+   - Thao tác chèn và xóa nhanh chóng, dễ dàng,
+  ** Biểu diễn linkedlist:
+   1. Data: dữ liệu được lưu trong node
+   2. A pointer to the next node (next): con trỏ trỏ đến node kế tiếp
+   3. A pointer to the previous node (prev) – con trỏ trỏ đến node phía trước
   
   
 
