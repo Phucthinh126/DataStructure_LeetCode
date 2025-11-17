@@ -122,6 +122,48 @@
    1. Data: dữ liệu được lưu trong node
    2. A pointer to the next node (next): con trỏ trỏ đến node kế tiếp
    3. A pointer to the previous node (prev) – con trỏ trỏ đến node phía trước
+  ** Tạo một Double Linked List:
+   - Gồm 4 node:
+    1. Tạo node head:
+    2. Tạo node tiếp theo và liên kết với head
+      head.next = new Node(data2)
+      head.next.prev = head
+    3. Tạo các node tiếp theo theo thứ tự tương tự
+    4. Đảm bảo node cuối cùng có next == null
+      tail.next = null
+  -----------------------------------------------------------
+ 
+  !! Circular Linked List
+   - Circular có node cuối cùng trỏ ngược lại node đầu tiên, tạo thành một vòng khép kính.
+   ** Cấu trúc:
+    - Tất cả các node liên kết với thành một vòng, cho phép duyệt liên tục mà không bao giờ gặp null.
+     head                     tail
+      ↓                       ↓
+    [LAX] → [MSP] → [ATL] → [BOS]
+    ↑                       │
+    |_______________________|
+    - Node cuối -> node đầu
+   ** Các loại circular lineked list:
+    1. Singly Circular Linked List - danh sách liên kết đơn dạng vòng.
+     + Mỗi node chỉ có một con trỏ duy nhất "next", next của node cuối trỏ đến vào node đầu tạo thành vòng tròn.
+     + Chỉ có thể di chuyển qua danh sách theo một chiều hướng duy nhất.
+
+     head                             tail
+      ↓                               ↓
+     [data|next] → [data|next] → [data|next]
+      ↑________________________________|
+
+    2. Doubly Circular Linked List - danh sách liên kết đôi dạng vòng.
+     + Mỗi node có hai con trỏ: prev và next.
+      . Con trỏ prev trỏ đến node trước.
+      . Con trỏ next đến node kế tiếp.
+     + Node cuối cùng không chỉ trỏ đến node đầu tiên mà node đầu tiên cũng trỏ trở lại node cuối cùng.
+     
+     |              __________________________________________
+     |              |                                        ↓
+      head → [prev|data|next] ↔  [prev|data|next] ↔  [prev|data|next] ← tail
+     |              ↑________________________________________|
+
   
   
 
