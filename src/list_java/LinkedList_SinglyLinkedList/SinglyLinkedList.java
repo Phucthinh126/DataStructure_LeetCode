@@ -43,6 +43,10 @@ public class SinglyLinkedList<E> {
 
     }
 
+    // add vao vi tri bat ky
+   
+
+
     // Add Last
     public void addLast(E data) {
         // B1. tao node moi

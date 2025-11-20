@@ -31,9 +31,15 @@ public class LinkedList_Demo1 {
             head.next.next.next = new Node(50);
 
             // print linked list
+            
             while (head != null) {
                 System.out.print(head.data + " ");
                 head = head.next;
+                if(head != null){
+                    System.out.print(" -> ");
+                }else{
+                    System.out.println();
+                }
             }
         }
 
