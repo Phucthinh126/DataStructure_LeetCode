@@ -1,0 +1,17 @@
+__________________Set____________________
+- Là 1 interface, là 1 phần của java collection
+- Đại diện cho tập hợp các phần tử duy nhất, không cho phép giá trị trùng lặp.
+- Set chỉ chứa các phần tử độc nhất
+- Không có chỉ mục không thể truy cập bằng getIndex như list
+#                                  Set
+|                                   | implements
+|                                   |
+|      HashSet                   LinkedSet                        TreeSet
+
+## HashSet:
+ #syntax: Set<E> name = new HashSet<>() or HashSet<E> name = new HashSet<>()
+ - Sử dụng data structure: hashTable
+ - Kích thước mặt định: capacity: 16, load factor = 0.75, phần tử vượt quá > capacity * load factor, hashSet tự động tăng kích thước để giữ hiệu năng
+ - Implements set interface.
+ - Lưu trữ các phần tử duy nhất, không cho phép các phần tử trùng lặp
+ - Không duy trùy bất kỳ thứ tự nào của các phần tử. hashSet sử dụng HashMap bên trong, khi in ra nó duyệt theo thứ tụ bucket từ thấp đến cao
