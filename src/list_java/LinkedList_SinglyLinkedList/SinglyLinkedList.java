@@ -4,12 +4,10 @@ public class SinglyLinkedList<E> {
     // sử dụng Generic class
     private Node<E> head;
     private Node<E> tail;
-    private int size;
 
     public SinglyLinkedList() {
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     // print
@@ -18,6 +16,11 @@ public class SinglyLinkedList<E> {
         while (current != null) {
             System.out.print(current.data + " ");
             current = current.next;
+            if (current != null) {
+                System.out.print(" -> ");
+            } else {
+                System.out.println();
+            }
         }
         System.out.println();
 
@@ -37,7 +40,6 @@ public class SinglyLinkedList<E> {
         if (tail == null) { // danh sach rong -> tail cung phai tro vao newNode
             tail = newNode;
         }
-        size++; // tang size
 
     }
 
@@ -58,19 +60,18 @@ public class SinglyLinkedList<E> {
             // B4. Cap nhat tail
             tail = newNode;
         }
-        size++;
 
     }
 
     // remove element
-    public E removeFirst(){
-        //1. danh sach rong
-        if(head == null){
+    public E removeFirst() {
+        // 1. danh sach rong
+        if (head == null) {
             throw new java.util.MissingFormatArgumentException("List is empty");
         }
 
         // 2. luu node se bi xoa (de tra ve gia tri)
-        Node<E> removed  =head;
+        Node<E> removed = head;
         E data = removed.data;
 
         // 3. di chuyen head
@@ -79,12 +80,10 @@ public class SinglyLinkedList<E> {
         // 4. ngan ro ri tham chieu
         removed.next = null;
 
-        // 5. giam size
-        size--;
 
         // 6. neu danh sach rong sau khi xoa -> cap nhat tail
-        if(head==null){
-            tail=null;
+        if (head == null) {
+            tail = null;
         }
         return data;
     }
@@ -161,7 +160,6 @@ public class SinglyLinkedList<E> {
      * === KẾT THÚC addFirst ===
      */
 
-     
     /*
      * ADD FIRST: "BOS"
      * B1: Tạo node mới: [BOS]
